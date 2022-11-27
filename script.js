@@ -1,4 +1,6 @@
-import $ from "https://cdn.skypack.dev/jquery@3.6.1";
+var script = document.createElement('script');
+script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
+document.getElementsByTagName('head')[0].appendChild(script);
 
 const newQuote = document.querySelector('#new-quote');
 const text = document.querySelector('#text');
