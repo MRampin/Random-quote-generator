@@ -9,26 +9,26 @@ html
   font-family: arial;
   quotes: auto;
   overflow-y: auto;
-  
-  #quote-box
-  {
-    width: 75vw;
-    height: minmax(350px, max-content);
-    min-width: 350px;
-    background: white;
-    display: grid;
-    grid-template-rows: 4fr 60px 80px;
-    grid-template-columns: 80px 80px 1fr 1fr;
-  }
-  
-  #text
-  {
-    font-size: 35px;
-    font-style: italic;
-    margin: 50px 50px 5px 50px;
-    grid-column: 1/5;
-    grid-row: 1;
-  }
+}
+
+#quote-box
+{
+  width: 75vw;
+  height: minmax(350px, max-content);
+  min-width: 350px;
+  background: white;
+  display: grid;
+  grid-template-rows: 4fr 60px 80px;
+  grid-template-columns: 80px 80px 1fr 1fr;
+}
+
+#text
+{
+  font-size: 35px;
+  font-style: italic;
+  margin: 50px 50px 5px 50px;
+  grid-column: 1/5;
+  grid-row: 1;
 }
 
 #author
