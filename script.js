@@ -1,6 +1,3 @@
-var script = document.createElement('script');
-script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js';
-document.getElementsByTagName('head')[0].appendChild(script);
 
 const newQuote = document.querySelector('#new-quote');
 const text = document.querySelector('#text');
