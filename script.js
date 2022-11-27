@@ -55,5 +55,5 @@ $(document).ready(function() {
 
   
   window.addEventListener('load', functions());
-  newQuote.addEventListener('click', functions);
+  newQuote.addEventListener('click', functions, false);
 });
