@@ -1,8 +1,5 @@
 $(document).ready(function() {
-  document.write("Hello, World! We are using Uncompressed jQuery.");
-});
-
-const newQuote = document.querySelector('#new-quote');
+  const newQuote = document.querySelector('#new-quote');
 const text = document.querySelector('#text');
 const author = document.querySelector('#author');
 const tweetQuote = document.querySelector('#tweet-quote');
@@ -59,3 +56,4 @@ const functions = () => {
 
 window.addEventListener('load', functions);
 newQuote.addEventListener('click', functions);
+});
