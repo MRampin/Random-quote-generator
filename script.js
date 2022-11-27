@@ -1,8 +1,5 @@
 $(document).ready(function() {
-  $('a').click(function(event) {
-    event.preventDefault();
-    $(this).hide("slow");
-  });
+  document.write("Hello, World! We are using Uncompressed jQuery.");
 });
 
 const newQuote = document.querySelector('#new-quote');
