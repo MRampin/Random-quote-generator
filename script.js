@@ -1,3 +1,9 @@
+$(document).ready(function() {
+  $('a').click(function(event) {
+    event.preventDefault();
+    $(this).hide("slow");
+  });
+});
 
 const newQuote = document.querySelector('#new-quote');
 const text = document.querySelector('#text');
