@@ -43,7 +43,7 @@ $(document).ready(function() {
         author.textContent = 'Anonymous';
       }
       //tweet button
-      $('#tweet-quote').attr('href','https://twitter.com/intent/tweet?text="'+encodeURIComponent(text.textContent+'" - '+author.textContent+' https://codepen.io/mrampin/full/bGKWYpQ')+'&hashtags=quotes,freeCodeCamp');
+      $('#tweet-quote').attr('href','https://twitter.com/intent/tweet?text="'+encodeURIComponent(text.textContent+'" - '+author.textContent)+'&hashtags=quotes,freeCodeCamp');
     });
   }
 
@@ -55,5 +55,5 @@ $(document).ready(function() {
 
   
   window.addEventListener('load', functions());
-  newQuote.addEventListener('click', functions());
+  newQuote.addEventListener('click', functions);
 });
