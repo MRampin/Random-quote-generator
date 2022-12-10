@@ -5,7 +5,7 @@ $(document).ready(function() {
   const tweetQuote = document.querySelector('#tweet-quote');
   
   if(!window.matchMedia("(pointer: fine)").matches) {
-    $("#webpage").css('height', window.innerHeight + "px");
+    $(this).css('height', window.innerHeight + "px");
   }
 
   const alpha = '40%'; //alpha value for rgba
