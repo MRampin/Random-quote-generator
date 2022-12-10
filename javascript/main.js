@@ -1,13 +1,15 @@
-if(!window.matchMedia("(pointer: fine)").matches) {
-  console.log("preso");
-  document.html.style.height = window.innerHeight + "px";
-}
+
 
 $(document).ready(function() {
   const newQuote = document.querySelector('#new-quote');
   const text = document.querySelector('#text');
   const author = document.querySelector('#author');
   const tweetQuote = document.querySelector('#tweet-quote');
+  
+  if(!window.matchMedia("(pointer: fine)").matches) {
+    console.log("preso");
+    $(this).css('height', window.innerHeight + "px");
+  }
 
   const alpha = '40%'; //alpha value for rgba
   //calculating a random rgb color
