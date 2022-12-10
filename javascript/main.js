@@ -1,5 +1,6 @@
 if(!window.matchMedia("(pointer: fine)").matches) {
-  $(document).css('height', window.innerHeight+'px');
+  console.log("preso");
+  $(this).css('height', window.innerHeight+'px');
 }
 
 $(document).ready(function() {
