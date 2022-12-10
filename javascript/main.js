@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
   const newQuote = document.querySelector('#new-quote');
   const text = document.querySelector('#text');
@@ -7,7 +5,6 @@ $(document).ready(function() {
   const tweetQuote = document.querySelector('#tweet-quote');
   
   if(!window.matchMedia("(pointer: fine)").matches) {
-    console.log("preso");
     $(this).css('height', window.innerHeight + "px");
   }
 
