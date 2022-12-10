@@ -1,3 +1,7 @@
+if(!window.matchMedia("(pointer: fine)").matches) {
+  $(document).css('height', window.innerHeight+'px');
+}
+
 $(document).ready(function() {
   const newQuote = document.querySelector('#new-quote');
   const text = document.querySelector('#text');
