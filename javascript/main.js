@@ -3,10 +3,6 @@ $(document).ready(function() {
   const text = document.querySelector('#text');
   const author = document.querySelector('#author');
   const tweetQuote = document.querySelector('#tweet-quote');
-  
-  if(!window.matchMedia("(pointer: fine)").matches) {
-    $(this).css('height', window.innerHeight + "px");
-  }
 
   const alpha = '40%'; //alpha value for rgba
   //calculating a random rgb color
@@ -50,14 +46,19 @@ $(document).ready(function() {
       $('#tweet-quote').attr('href','https://twitter.com/intent/tweet?text="'+encodeURIComponent(text.textContent+'" - '+author.textContent)+'&hashtags=quotes,freeCodeCamp');
     });
   }
+  
+  const resizeHeight = () => {
+    $('.maxHeight').css('height', window.innerHeight+'px');
+  }
 
   //calling both functions at the page load and with button call
   const functions = () => {
     backgroundColor();
     quoteSelector();
+    resizeHeight();
   }
 
-  
+  window.addEventListener("resize", resizeHeight);
   window.addEventListener('load', functions());
   newQuote.addEventListener('click', functions, false);
 });
