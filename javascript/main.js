@@ -31,19 +31,28 @@ $(document).ready(function() {
 
   //selecting a quote in the 'db'
   const quoteSelector = () => {
-    $.getJSON('https://type.fit/api/quotes', function(data){
-      //selecting a random quote
-      const n = parseInt(Math.random() * data.length);
-      text.textContent = data[n].text;
-      //in case the author is null it get replaced by Anonymous
-      if (data[n].author != null){
-        author.textContent = data[n].author;
-      }
-      else {
-        author.textContent = 'Anonymous';
-      }
-      //tweet button
-      $('#tweet-quote').attr('href','https://twitter.com/intent/tweet?text="'+encodeURIComponent(text.textContent+'" - '+author.textContent)+'&hashtags=quotes,freeCodeCamp');
+    $.getJSON('https://api.quotable.io/quotes', function(data){
+    	//Get total number of pages
+    	const totalPages = data.totalPages;
+    	//Select a random page
+    	const randomPage = parseInt(Math.random() * totalPages);
+    	//Go to the selected page
+    	$.getJSON(`https://api.quotable.io/quotes?page=${randomPage}`, function(pageData){
+    		//get the total number of quotes in the page
+    		const totalQuotes = pageData.count;
+    		//Select a random quote
+    		const randomQuote = parseInt(Math.random() * totalQuotes);
+    		text.textContent = pageData.results[randomQuote].content;
+      	//in case the author is null it get replaced by Anonymous
+      	if (pageData.results[randomQuote].author != null){
+        		author.textContent = pageData.results[randomQuote].author;
+      	}
+      	else {
+        		author.textContent = 'Anonymous';
+      	}
+      	//tweet button
+      	$('#tweet-quote').attr('href','https://twitter.com/intent/tweet?text="'+encodeURIComponent(text.textContent+'" - '+author.textContent)+'&hashtags=quotes,freeCodeCamp');
+    	});
     });
   }
   
